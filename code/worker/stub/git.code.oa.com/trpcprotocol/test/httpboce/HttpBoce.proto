@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+// package内容格式推荐为trpc.{app}.{server}，以trpc为固定前缀，标识这是一个trpc服务协议，app为你的应用名，server为你的服务进程名
+package trpc.test.httpboce;
+
+// 注意：这里go_package指定的是协议生成文件pb.go在git上的地址，不要和上面的服务的git仓库地址一样
+option go_package="git.code.oa.com/trpcprotocol/test/httpboce";
+
+// 定义服务接口
+service Greeter {
+  rpc Boce (HelloRequest) returns (HelloReply) {}
+}
+
+// 请求参数
+message HelloRequest {
+  string msg = 1;
+}
+
+// 响应参数
+message HelloReply {
+  string msg = 1;
+}
