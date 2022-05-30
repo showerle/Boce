@@ -1,0 +1,7 @@
+*.sh linguist-language=Go
+*.proto linguist-language=Go
+*.yaml linguist-language=Go
+*.full linguist-language=Go
+*.git linguist-language=Go
+*.mod linguist-language=Go
+
